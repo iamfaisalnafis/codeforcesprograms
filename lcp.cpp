@@ -42,7 +42,7 @@ int main()
 {
     string arr[] = {"geeksforgeeks", "geeks",
                     "geek", "geezer"};
-    int n = sizeof (arr) / sizeof (arr[0]);
+    int n = sizeof(arr) / sizeof(arr[0]);
  
     string ans = longestcommonPrefix(arr, n);
  
