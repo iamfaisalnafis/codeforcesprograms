@@ -31,7 +31,6 @@ void stringComparision (string s1, string s2)
         cout << "String 1 is greater than String 2.";
         cout << endl;
     }
-
 }
 
 int main()
