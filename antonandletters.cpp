@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <string>
 #include <set>
@@ -18,4 +19,15 @@ int main()
     }
     cout << a.size() << endl;
     return 0;
+=======
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main()
+{
+    set<int> s1{};
+    
+>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
 }
