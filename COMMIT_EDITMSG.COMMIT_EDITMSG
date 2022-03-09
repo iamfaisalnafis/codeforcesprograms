@@ -1,0 +1,332 @@
+Update
+
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/defangedIPAdress_leetcode.cpp b/defangedIPAdress_leetcode.cpp
+new file mode 100644
+index 0000000..9bba6e1
+--- /dev/null
++++ b/defangedIPAdress_leetcode.cpp
+@@ -0,0 +1,19 @@
++#include <bits/stdc++.h>
++using namespace std;
++
++int main()
++{
++	string address;
++	cin >> address;
++	string res = "";
++	for (int i = 0; i < address.length(); i++)
++	{
++		if(address[i] == '.')
++		{
++			res += "[.]";
++		}
++		else
++			res += address[i];
++	}
++	cout << res;
++}
+\ No newline at end of file
+diff --git a/defangedIPAdress_leetcode.exe b/defangedIPAdress_leetcode.exe
+new file mode 100644
+index 0000000..37a8088
+Binary files /dev/null and b/defangedIPAdress_leetcode.exe differ
+diff --git a/file.cpp b/file.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/fractionResult_gfg.cpp b/fractionResult_gfg.cpp
+new file mode 100644
+index 0000000..99dc428
+--- /dev/null
++++ b/fractionResult_gfg.cpp
+@@ -0,0 +1,39 @@
++#include <bits/stdc++.h>
++using namespace std;
++
++string fractiontoDecimal(int numerator, int denominator)
++{
++	int whole = numerator / denominator;
++	int decimal = numerator % denominator;
++	string ans = to_string(whole);
++	if (decimal == 0) return ans;
++	unordered_map<int, int> mp;
++	mp.clear();
++	ans += ".";
++	while (decimal != 0)
++	{
++		if(mp.count(decimal))
++		{
++			ans.insert(mp[decimal], "(");
++			ans += ")";
++			return ans;
++		}
++		else
++		{
++			mp[decimal] = ans.length();
++			decimal *= 10;
++			int q = decimal / denominator;
++			decimal = decimal % denominator;
++			ans += to_string(q);
++		}
++	}
++	return ans;
++}
++
++int main(int argc, char const *argv[])
++{
++	int numerator, denominator;
++	cin >> numerator >> denominator;
++	cout << fractiontoDecimal (numerator, denominator) << endl;
++	return 0;
++}
+diff --git a/fractionResult_gfg.exe b/fractionResult_gfg.exe
+new file mode 100644
+index 0000000..d37e54d
+Binary files /dev/null and b/fractionResult_gfg.exe differ
+diff --git a/goodPairs_leetcode.cpp b/goodPairs_leetcode.cpp
+new file mode 100644
+index 0000000..902612c
+--- /dev/null
++++ b/goodPairs_leetcode.cpp
+@@ -0,0 +1,37 @@
++#include <bits/stdc++.h>
++using namespace std;
++
++int identicalPairs(vector<int>& nums)
++{
++	ios::sync_with_stdio(0);
++	cin.tie(0);
++	unordered_map<int, int> count;
++	int ans(0);
++	for (int i = 0; i < nums.size(); i++)
++	{
++		count[nums[i]]++;
++	}
++	for (auto i : count)
++	{
++		if (i.second > 1)
++		{
++			int nc = i.second;
++			ans += (nc * (nc - 1)) / 2; 
++		}
++	}
++	return ans;
++}
++
++int main()
++{
++	int n, a;
++	vector<int> nums;
++	cin >> n;
++	for (int i =0; i < n; i++)
++	{
++		cin >> a;
++		nums.push_back(a);
++	}
++	cout << identicalPairs(nums) << endl;
++	return 0;
++}
+diff --git a/goodPairs_leetcode.exe b/goodPairs_leetcode.exe
+new file mode 100644
+index 0000000..cdaf212
+Binary files /dev/null and b/goodPairs_leetcode.exe differ
+diff --git a/hello_world.cpp b/hello_world.cpp
+new file mode 100644
+index 0000000..9505381
+--- /dev/null
++++ b/hello_world.cpp
+@@ -0,0 +1,17 @@
++#include <bits/stdc++.h>
++using namespace std;
++
++int main()
++{
++	int number;
++	cin >> number;
++	if (number == 10)
++	{
++		cout << "Correct Guess: " << endl;
++	}
++	else
++	{
++		cout << "Wrong Guess: " << endl;
++	}
++	return 0;
++}
+diff --git a/hello_world.exe b/hello_world.exe
+new file mode 100644
+index 0000000..3e0d6cd
+Binary files /dev/null and b/hello_world.exe differ
+diff --git a/kidswithCandies_leetcode.cpp b/kidswithCandies_leetcode.cpp
+new file mode 100644
+index 0000000..3693959
+--- /dev/null
++++ b/kidswithCandies_leetcode.cpp
+@@ -0,0 +1,43 @@
++#include <bits/stdc++.h>
++using namespace std;
++
++vector<bool> kidswithCandies(vector<int>& candies, int extraCandies)
++{
++	ios::sync_with_stdio(0);
++	cin.tie(0), cout.tie(0);
++	vector<bool> result;
++	int maxNum(INT_MIN);
++	for (int i = 0; i < candies.size(); i++)
++	{
++		if(candies[i] > maxNum)
++		{
++			maxNum = candies[i];
++		}
++	}
++	for (int i = 0; i < candies.size(); i++)
++	{
++		if(candies[i] + extraCandies >= maxNum)
++		{
++			result.push_back(true);
++		}
++		else
++		{
++			result.push_back(false);
++		}
++	}
++	return result;
++}
++
++int main()
++{
++	vector<int> candies;
++	int n, a, eC;
++	cin >> n >> eC;
++	for (int i = 0; i < n; i++)
++	{
++		cin >> a;
++		candies.push_back(a);
++	}
++	kidswithCandies(candies, eC);
++	return 0;
++}
+diff --git a/kidswithCandies_leetcode.exe b/kidswithCandies_leetcode.exe
+new file mode 100644
+index 0000000..0579337
+Binary files /dev/null and b/kidswithCandies_leetcode.exe differ
+diff --git a/majorityElement_gfg.cpp b/majorityElement_gfg.cpp
+new file mode 100644
+index 0000000..6aab8ec
+--- /dev/null
++++ b/majorityElement_gfg.cpp
+@@ -0,0 +1,55 @@
++#include <bits/stdc++.h>
++#define pb push_back
++using namespace std;
++
++int majorityElement (vector<int>& nums)
++{
++	int votes(0), candidate(-1);
++	int nS = nums.size();
++	for (int i = 0; i < nS; i++)
++	{
++		if(votes == 0)
++		{
++			candidate = nums[i];
++			votes = 1;
++		}
++		else
++		{
++			if(nums[i] == candidate)
++			{
++				votes++;
++			}
++			else
++			{
++				votes--;
++			}
++		}
++	}
++	int count(0);
++	for (int i = 0; i < nS; i++)
++	{
++		if(nums[i] == candidate)
++		{
++			count++;
++		}
++	}
++	if (count > nS/2)
++	{
++		return candidate;
++	}
++	return -1;
++}
++
++int main()
++{
++	vector<int> nums;
++	int n, a;
++	cin >> n;
++	for (int i = 0; i < n; i++)
++	{
++		cin >> a;
++		nums.push_back(a);
++	}
++	cout << majorityElement(nums);
++	return 0;
++}
+\ No newline at end of file
+diff --git a/majorityElement_gfg.exe b/majorityElement_gfg.exe
+new file mode 100644
+index 0000000..3778f47
+Binary files /dev/null and b/majorityElement_gfg.exe differ
+diff --git a/removeElement_leetcode.cpp b/removeElement_leetcode.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/smallerNumbersThanCurrent_leetcode.cpp b/smallerNumbersThanCurrent_leetcode.cpp
+new file mode 100644
+index 0000000..20b818a
+--- /dev/null
++++ b/smallerNumbersThanCurrent_leetcode.cpp
+@@ -0,0 +1,38 @@
++#include <bits/stdc++.h>
++using namespace std;
++
++vector<int> smallerNumbersThanCurrent(vector<int>& nums)
++{
++	ios::sync_with_stdio(0);
++	cin.tie(0), cout.tie(0);
++	std::map<int, int> helper;
++	std::vector<int> vec(nums.begin(), nums.end());
++	sort (vec.begin(), vec.end());
++	for (int i = nums.size() - 1; i >= 0; i--)
++	{
++		helper[vec[i]] = i;
++	}
++	for (int i = 0; i < nums.size(); i++)
++	{
++		nums[i] = helper[nums[i]];
++	}
++	for (auto x : nums)
++	{
++		cout << x << " ";
++	}
++	return nums;
++}
++
++int main()
++{
++	vector<int> nums;
++	int n, a;
++	cin >> n;
++	for (int i = 0; i < n; i++)
++	{
++		cin >> a;
++		nums.push_back(a);
++	}
++	smallerNumbersThanCurrent(nums);
++	return 0;
++}
+diff --git a/smallerNumbersThanCurrent_leetcode.exe b/smallerNumbersThanCurrent_leetcode.exe
+new file mode 100644
+index 0000000..bb34f72
+Binary files /dev/null and b/smallerNumbersThanCurrent_leetcode.exe differ
