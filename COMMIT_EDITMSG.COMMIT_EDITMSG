@@ -4,329 +4,3647 @@ Update
 # Please enter the commit message for your changes. Everything below
 # this paragraph is ignored, and an empty message aborts the commit.
 # Just close the window to accept your message.
-diff --git a/defangedIPAdress_leetcode.cpp b/defangedIPAdress_leetcode.cpp
-new file mode 100644
-index 0000000..9bba6e1
---- /dev/null
-+++ b/defangedIPAdress_leetcode.cpp
-@@ -0,0 +1,19 @@
-+#include <bits/stdc++.h>
-+using namespace std;
-+
-+int main()
-+{
-+	string address;
-+	cin >> address;
-+	string res = "";
-+	for (int i = 0; i < address.length(); i++)
-+	{
-+		if(address[i] == '.')
-+		{
-+			res += "[.]";
-+		}
-+		else
-+			res += address[i];
-+	}
-+	cout << res;
-+}
+diff --git a/COMMIT_EDITMSG.COMMIT_EDITMSG b/COMMIT_EDITMSG.COMMIT_EDITMSG
+index e08756e..4ff9fed 100644
+--- a/COMMIT_EDITMSG.COMMIT_EDITMSG
++++ b/COMMIT_EDITMSG.COMMIT_EDITMSG
+@@ -4,329 +4,3143 @@ Update
+ # Please enter the commit message for your changes. Everything below
+ # this paragraph is ignored, and an empty message aborts the commit.
+ # Just close the window to accept your message.
+-diff --git a/defangedIPAdress_leetcode.cpp b/defangedIPAdress_leetcode.cpp
+-new file mode 100644
+-index 0000000..9bba6e1
+---- /dev/null
+-+++ b/defangedIPAdress_leetcode.cpp
+-@@ -0,0 +1,19 @@
+-+#include <bits/stdc++.h>
+-+using namespace std;
+-+
+-+int main()
+-+{
+-+	string address;
+-+	cin >> address;
+-+	string res = "";
+-+	for (int i = 0; i < address.length(); i++)
+-+	{
+-+		if(address[i] == '.')
+-+		{
+-+			res += "[.]";
+-+		}
+-+		else
+-+			res += address[i];
+-+	}
+-+	cout << res;
+-+}
++diff --git a/README.md b/README.md
++index 983b57a..aad6d64 100644
++--- a/README.md
+++++ b/README.md
++@@ -1,3 +1,7 @@
+++<<<<<<< HEAD
++ # codeforcesprograms
++ 
++ All the programs that i will be attempting on CodeForces will be updated here on a regular basis. If you have any doubts regarding the program. Please reach out to me. 
+++=======
+++# codeforcesprograms
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++diff --git a/antonanddanik.cpp b/antonanddanik.cpp
++index cc51d9c..de313d6 100644
++--- a/antonanddanik.cpp
+++++ b/antonanddanik.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -34,4 +35,42 @@ int main()
++         cout << "Danik";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, a(0), d(0);
+++    cin >> n;
+++    string s;
+++    cin >> s;
+++
+++    for (int i = 0; i < n; i++)
+++    {
+++        if(s[i] == 'A')
+++        {
+++            a++;
+++        }
+++        else
+++        {
+++            d++;
+++        }
+++    }
+++    if (a > d)
+++    {
+++        cout << "Anton";
+++    }
+++    else if (d == a)
+++    {
+++        cout << "Friendship";
+++    }
+++    else
+++    {
+++        cout << "Danik";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
+ \ No newline at end of file
+-diff --git a/defangedIPAdress_leetcode.exe b/defangedIPAdress_leetcode.exe
+-new file mode 100644
+-index 0000000..37a8088
+-Binary files /dev/null and b/defangedIPAdress_leetcode.exe differ
+-diff --git a/file.cpp b/file.cpp
+-new file mode 100644
+-index 0000000..e69de29
+-diff --git a/fractionResult_gfg.cpp b/fractionResult_gfg.cpp
+-new file mode 100644
+-index 0000000..99dc428
+---- /dev/null
+-+++ b/fractionResult_gfg.cpp
+-@@ -0,0 +1,39 @@
+-+#include <bits/stdc++.h>
+-+using namespace std;
+-+
+-+string fractiontoDecimal(int numerator, int denominator)
+-+{
+-+	int whole = numerator / denominator;
+-+	int decimal = numerator % denominator;
+-+	string ans = to_string(whole);
+-+	if (decimal == 0) return ans;
+-+	unordered_map<int, int> mp;
+-+	mp.clear();
+-+	ans += ".";
+-+	while (decimal != 0)
+-+	{
+-+		if(mp.count(decimal))
+-+		{
+-+			ans.insert(mp[decimal], "(");
+-+			ans += ")";
+-+			return ans;
+-+		}
+-+		else
+-+		{
+-+			mp[decimal] = ans.length();
+-+			decimal *= 10;
+-+			int q = decimal / denominator;
+-+			decimal = decimal % denominator;
+-+			ans += to_string(q);
+-+		}
+-+	}
+-+	return ans;
+-+}
++diff --git a/antonandletters.cpp b/antonandletters.cpp
++index 4473512..54b1f69 100644
++--- a/antonandletters.cpp
+++++ b/antonandletters.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <set>
++@@ -18,4 +19,15 @@ int main()
++     }
++     cout << a.size() << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <set>
+ +
+-+int main(int argc, char const *argv[])
+++using namespace std;
+++
+++int main()
+ +{
+-+	int numerator, denominator;
+-+	cin >> numerator >> denominator;
+-+	cout << fractiontoDecimal (numerator, denominator) << endl;
+-+	return 0;
+-+}
+-diff --git a/fractionResult_gfg.exe b/fractionResult_gfg.exe
+-new file mode 100644
+-index 0000000..d37e54d
+-Binary files /dev/null and b/fractionResult_gfg.exe differ
+-diff --git a/goodPairs_leetcode.cpp b/goodPairs_leetcode.cpp
+-new file mode 100644
+-index 0000000..902612c
+---- /dev/null
+-+++ b/goodPairs_leetcode.cpp
+-@@ -0,0 +1,37 @@
+-+#include <bits/stdc++.h>
+-+using namespace std;
+-+
+-+int identicalPairs(vector<int>& nums)
+-+{
+-+	ios::sync_with_stdio(0);
+-+	cin.tie(0);
+-+	unordered_map<int, int> count;
+-+	int ans(0);
+-+	for (int i = 0; i < nums.size(); i++)
+-+	{
+-+		count[nums[i]]++;
+-+	}
+-+	for (auto i : count)
+-+	{
+-+		if (i.second > 1)
+-+		{
+-+			int nc = i.second;
+-+			ans += (nc * (nc - 1)) / 2; 
+-+		}
+-+	}
+-+	return ans;
+-+}
+++    set<int> s1{};
+++    
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/areaofcircle.cpp b/areaofcircle.cpp
++index 3d9d994..ec77b25 100644
++--- a/areaofcircle.cpp
+++++ b/areaofcircle.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -13,4 +14,21 @@ int main()
++ 
++     std::cout << "The area of the traingle is: " << area << " & the circumference is: " << circumference << std::endl;
++     return 0;
+++=======
+++#include <iostream>
+ +
+ +int main()
+ +{
+-+	int n, a;
+-+	vector<int> nums;
+-+	cin >> n;
+-+	for (int i =0; i < n; i++)
+-+	{
+-+		cin >> a;
+-+		nums.push_back(a);
+-+	}
+-+	cout << identicalPairs(nums) << endl;
+-+	return 0;
+-+}
+-diff --git a/goodPairs_leetcode.exe b/goodPairs_leetcode.exe
+-new file mode 100644
+-index 0000000..cdaf212
+-Binary files /dev/null and b/goodPairs_leetcode.exe differ
+-diff --git a/hello_world.cpp b/hello_world.cpp
+-new file mode 100644
+-index 0000000..9505381
+---- /dev/null
+-+++ b/hello_world.cpp
+-@@ -0,0 +1,17 @@
+-+#include <bits/stdc++.h>
+-+using namespace std;
+-+
+-+int main()
+-+{
+-+	int number;
+-+	cin >> number;
+-+	if (number == 10)
+-+	{
+-+		cout << "Correct Guess: " << endl;
+-+	}
+-+	else
+-+	{
+-+		cout << "Wrong Guess: " << endl;
+-+	}
+-+	return 0;
+-+}
+-diff --git a/hello_world.exe b/hello_world.exe
+-new file mode 100644
+-index 0000000..3e0d6cd
+-Binary files /dev/null and b/hello_world.exe differ
+-diff --git a/kidswithCandies_leetcode.cpp b/kidswithCandies_leetcode.cpp
+-new file mode 100644
+-index 0000000..3693959
+---- /dev/null
+-+++ b/kidswithCandies_leetcode.cpp
+-@@ -0,0 +1,43 @@
+-+#include <bits/stdc++.h>
+-+using namespace std;
+-+
+-+vector<bool> kidswithCandies(vector<int>& candies, int extraCandies)
+-+{
+-+	ios::sync_with_stdio(0);
+-+	cin.tie(0), cout.tie(0);
+-+	vector<bool> result;
+-+	int maxNum(INT_MIN);
+-+	for (int i = 0; i < candies.size(); i++)
+-+	{
+-+		if(candies[i] > maxNum)
+-+		{
+-+			maxNum = candies[i];
+-+		}
+-+	}
+-+	for (int i = 0; i < candies.size(); i++)
+-+	{
+-+		if(candies[i] + extraCandies >= maxNum)
+-+		{
+-+			result.push_back(true);
+-+		}
+-+		else
+-+		{
+-+			result.push_back(false);
+-+		}
+-+	}
+-+	return result;
+-+}
+++    float radius, area, circumference;
+++    std::cout << "Enter the radius of the circle to find it's area & circumference: ";
+++    std::cin >> radius;
+++
+++    std::cout << std::endl;
+++
+++    area = 3.1428 * radius * radius;
+++    circumference = 2 * 3.1428 * radius;
+++
+++    std::cout << "The area of the traingle is: " << area << " & the circumference is: " << circumference << std::endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/arrivalofthegeneral.cpp b/arrivalofthegeneral.cpp
++index 6b2884f..f7649b3 100644
++--- a/arrivalofthegeneral.cpp
+++++ b/arrivalofthegeneral.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -31,4 +32,39 @@ int main()
++         cout << (maxindex - 1) + ( n - minindex);
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++using namespace std;
+ +
+ +int main()
+ +{
+-+	vector<int> candies;
+-+	int n, a, eC;
+-+	cin >> n >> eC;
+-+	for (int i = 0; i < n; i++)
+-+	{
+-+		cin >> a;
+-+		candies.push_back(a);
+-+	}
+-+	kidswithCandies(candies, eC);
+-+	return 0;
+-+}
+-diff --git a/kidswithCandies_leetcode.exe b/kidswithCandies_leetcode.exe
+-new file mode 100644
+-index 0000000..0579337
+-Binary files /dev/null and b/kidswithCandies_leetcode.exe differ
+-diff --git a/majorityElement_gfg.cpp b/majorityElement_gfg.cpp
+-new file mode 100644
+-index 0000000..6aab8ec
+---- /dev/null
+-+++ b/majorityElement_gfg.cpp
+-@@ -0,0 +1,55 @@
+-+#include <bits/stdc++.h>
+-+#define pb push_back
+-+using namespace std;
+-+
+-+int majorityElement (vector<int>& nums)
+-+{
+-+	int votes(0), candidate(-1);
+-+	int nS = nums.size();
+-+	for (int i = 0; i < nS; i++)
+-+	{
+-+		if(votes == 0)
+-+		{
+-+			candidate = nums[i];
+-+			votes = 1;
+-+		}
+-+		else
+-+		{
+-+			if(nums[i] == candidate)
+-+			{
+-+				votes++;
+-+			}
+-+			else
+-+			{
+-+				votes--;
+-+			}
+-+		}
+-+	}
+-+	int count(0);
+-+	for (int i = 0; i < nS; i++)
+-+	{
+-+		if(nums[i] == candidate)
+-+		{
+-+			count++;
+-+		}
+-+	}
+-+	if (count > nS/2)
+-+	{
+-+		return candidate;
+-+	}
+-+	return -1;
+++    int n, maxvalue(0), minvalue(1000), maxindex(0), minindex(0);
+++    cin >> n;
+++    for(int i = 0; i < n; i++)
+++    {
+++        int x;
+++        cin >> x;
+++        if (x > maxvalue)
+++        {
+++            maxindex = i;
+++            maxvalue = x;
+++        }
+++        if (x <= minvalue)
+++        {
+++            minindex = i;
+++            minvalue = x;
+++        }
+++    }
+++    if (maxindex > minindex)
+++    {
+++        cout << (maxindex - 1) + (n - minindex) - 1 << endl;
+++    }
+++    else
+++    {
+++        cout << (maxindex - 1) + ( n - minindex);
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/atm.cpp b/atm.cpp
++index 0fc18f7..f048907 100644
++--- a/atm.cpp
+++++ b/atm.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <iomanip>
++ #include <cmath>
++@@ -22,4 +23,30 @@ int main()
++         cout << fixed << setprecision(2) << b;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <iomanip>
+++#include <cmath>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n; 
+++    float b;
+++    cin >> n >> b;
+++    if (fmod(n, 5) == 0 && b > n)
+++    {
+++        cout << fixed << setprecision(2) << (b - n) - 0.50;
+++    }
+++    else if (fmod(n, 5) == 0 && b < n)
+++    {
+++        cout << fixed << setprecision(2) << b;
+++    }
+++    else
+++    {
+++        cout << fixed << setprecision(2) << b;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/basics.cpp b/basics.cpp
++index 66ba43a..4c224d9 100644
++--- a/basics.cpp
+++++ b/basics.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -22,3 +23,29 @@ int main()
++     }
++     return 0;
++ }
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int n, m = 0, flag = 0;
+++    cout << "Enter a number to check if it's a Prime number or not: ";
+++    cin >> n;
+++    m = n / 2;
+++    for (int i = 2; i <= m; i++)
+++    {
+++        if(n % i == 0)
+++        {
+++            cout << n <<" is not a Prime Number" << endl;
+++            flag = 1;
+++            break;
+++        }
+++    }
+++    if (flag == 0)
+++    {
+++        cout << n << " is a Prime Number" << endl;
+++    }
+++    return 0;
+ +}
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++diff --git a/bearandbigbrother.cpp b/bearandbigbrother.cpp
++index 8fa393a..f39b723 100644
++--- a/bearandbigbrother.cpp
+++++ b/bearandbigbrother.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -20,4 +21,28 @@ int main()
++     }
++     cout << c << endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int a, b, c(0);
+++    cin >> a >> b;
+++    if (a>b)
+++    {
+++        c = 0;
+++    }
+++    else{
+++        while (a<=b)
+++        {
+++            a = a * 3;
+++            b = b * 2;
+++            c++;
+++        }
+++    }
+++    cout << c << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/beautifulmatrix.cpp b/beautifulmatrix.cpp
++index 5c2acc8..fa02455 100644
++--- a/beautifulmatrix.cpp
+++++ b/beautifulmatrix.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -16,4 +17,24 @@ int main()
++         }
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++int main()
+++{
+++    int x = 0;
+++    for (int i = 1; i <= 5; i++)
+++    {
+++        for (int j = 1; j <= 5; j++)
+++        {
+++            std::cin >> x;
+++            if(x == 1)
+++            {
+++                std::cout << abs(i-3) + abs(j-3) << std::endl;
+++            }
+++        }
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/beautifulyear.cpp b/beautifulyear.cpp
++index 84c45b2..446056c 100644
++--- a/beautifulyear.cpp
+++++ b/beautifulyear.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -20,4 +21,28 @@ int main()
++     }
++     cout << y << endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int y;
+++    cin >> y;
+++    while (true)
+++    {
+++        y += 1;
+++        int a = y / 1000; // first digit
+++        int b = y / 100 % 10; // second digit
+++        int c = y / 10 % 10; // third digit
+++        int d = y % 10; // fourth digit
+++        if(a != b && a != c && a != d && b != c && b != d && c != d)
+++        {
+++            break;
+++        }
+++    }
+++    cout << y << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/binaryoperations.cpp b/binaryoperations.cpp
++index 2ad14c6..19639eb 100644
++--- a/binaryoperations.cpp
+++++ b/binaryoperations.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -41,4 +42,49 @@ int main()
++     std::cout << std::endl;
++     std::cout << temp1 << " + " << temp2 << " = " << bin;
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+ +
+ +int main()
+ +{
+-+	vector<int> nums;
+-+	int n, a;
+-+	cin >> n;
+-+	for (int i = 0; i < n; i++)
+-+	{
+-+		cin >> a;
+-+		nums.push_back(a);
+-+	}
+-+	cout << majorityElement(nums);
+-+	return 0;
+++    long long bin = 0, bin1, bin2, dec = 0, dec2 = 0, i = 0, j = 0, rem, rem2, rem3, add, k =1;
+++    std::cout << "Enter the first binary number: ";
+++    std::cin >> bin1;
+++
+++    std::cout << std::endl;
+++
+++    std::cout << "Enetr the second binary number: ";
+++    std::cin >> bin2;
+++
+++    int temp1= bin1;
+++    int temp2 = bin2;
+++
+++    while (bin1 != 0)
+++    {
+++        rem = bin1 % 10;
+++        bin1 = bin1 / 10;
+++        dec = dec + rem * pow(2, i);
+++        i++;
+++    }
+++    while (bin2 != 0)
+++    {
+++        rem2 = bin2 % 10;
+++        bin2 = bin2 / 10;
+++        dec2 = dec2 + rem2 * pow(2, j);
+++        j++;
+++    }
+++    int result = dec + dec2;
+++
+++    while(result != 0)
+++    {
+++        rem3 = result % 2;
+++        result = result / 2;
+++        bin = bin + (rem3 * k);
+++        k = k * 10;
+++    }
+++    std::cout << std::endl;
+++    std::cout << temp1 << " + " << temp2 << " = " << bin;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/bit++.cpp b/bit++.cpp
++index e91fa10..a0cdd4c 100644
++--- a/bit++.cpp
+++++ b/bit++.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -21,4 +22,29 @@ int main()
++     }
++     std::cout << x << std::endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++int main()
+++{
+++    int n, x(0);
+++    std::cin >> n;
+++
+++    std::string s;
+++    while (n--)
+++    {
+++        std::cin >> s;
+++        if(s[1] == '+')
+++        {
+++            ++x;
+++        }
+++        else
+++        {
+++            --x;
+++        }
+++    }
+++    std::cout << x << std::endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/boyorgirl.cpp b/boyorgirl.cpp
++index 54551ee..7165a0e 100644
++--- a/boyorgirl.cpp
+++++ b/boyorgirl.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <algorithm>
++@@ -19,4 +20,27 @@ int main()
++         cout << "IGNORE HIM!";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <algorithm>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    string s;
+++    cin >> s;
+++    sort(s.begin(), s.end());
+++    s.erase(unique(s.begin(), s.end()), s.end());
+++    if(s.length() % 2 == 0)
+++    {
+++        cout << "CHAT WITH HER!";
+++    }
+++    else
+++    {
+++        cout << "IGNORE HIM!";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/calculatingfunctions.cpp b/calculatingfunctions.cpp
++index e898caa..375a40b 100644
++--- a/calculatingfunctions.cpp
+++++ b/calculatingfunctions.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -17,4 +18,25 @@ int main()
++         cout << f;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    long long int n, f;
+++    cin >> n;
+++    if (n % 2 == 0)
+++    {
+++        f = n / 2;
+++        cout << f;
+++    }
+++    else
+++    {
+++        f = (n - 1) / 2 - n;
+++        cout << f;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/currenttime.cpp b/currenttime.cpp
++index 02fdcd1..7be255a 100644
++--- a/currenttime.cpp
+++++ b/currenttime.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <ctime>
++ 
++@@ -8,4 +9,16 @@ int main()
++     std::cout << "Calender date and time as per today is: " << asctime(localtime(&timetoday));
++      
++     return 0;
+++=======
+++#include <iostream>
+++#include <ctime>
+++
+++int main()
+++{
+++    time_t timetoday;
+++    time (&timetoday);
+++    std::cout << "Calender date and time as per today is: " << asctime(localtime(&timetoday));
+++     
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/decendingorderlist.cpp b/decendingorderlist.cpp
++index f72f26a..31859d1 100644
++--- a/decendingorderlist.cpp
+++++ b/decendingorderlist.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <vector>
++ #include <algorithm>
++@@ -17,4 +18,25 @@ int main()
++         std::cout << nums[i] << std::endl;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <vector>
+++#include <algorithm>
+++
+++int main()
+++{
+++    std::vector<int> nums;
+++    int n;
+++    while(std::cin >> n)
+++    {
+++        nums.push_back(n);
+++    }
+++    std::sort(nums.rbegin(), nums.rend());
+++
+++    for (int i = 0; i != 3; ++i)
+++    {
+++        std::cout << nums[i] << std::endl;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/digitrectangle.cpp b/digitrectangle.cpp
++index b297398..ba8b241 100644
++--- a/digitrectangle.cpp
+++++ b/digitrectangle.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -26,4 +27,34 @@ int main()
++         std::cout << std::endl;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    float length, breath;
+++
+++    std::cout << "Enter the length of the rectangle: ";
+++    std::cin >> length;
+++
+++    std::cout << "Enter the breath of the rectangle: ";
+++    std::cin >> breath;
+++
+++    for (int i = 1; i <= length; i++)
+++    {
+++        for (int j = 1; j <= breath; j++)
+++        {
+++            if (i == 1 || j == 1 || i == length || j == breath)
+++            {
+++                std::cout << length << " ";
+++            }
+++            else
+++            {
+++                std::cout << "   ";
+++            }
+++        }
+++        std::cout << std::endl;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/distanceconverter.cpp b/distanceconverter.cpp
++index 896f5ff..dce822b 100644
++--- a/distanceconverter.cpp
+++++ b/distanceconverter.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -39,4 +40,47 @@ default:
++     std::cout << "Invalid Choice! Please rerun the program and try again..";
++     break;
++ }
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    char choice;
+++    float mile, kilometer, m2k, k2m;
+++    
+++    std::cout << "########## Welcome to Distance Converter ##########";
+++    std::cout << std::endl;
+++    std::cout << "1. Kilometeres to Miles.";
+++    std::cout << std::endl;
+++    std::cout << "2. Miles to Kilometeres.";
+++    std::cout << std::endl;
+++    std::cout << "Please input your choice: ";
+++    
+++    std::cin >> choice;
+++
+++    std::cout << std::endl;
+++
+++switch (choice)
+++{
+++case '1':
+++    std::cout << "Please input values in Kilometers: ";
+++    std::cin >> kilometer;
+++    k2m = kilometer * 0.62137;
+++    std::cout << kilometer << " in Miles is: " << k2m;
+++    std::cout << std::endl;
+++    break;
+++case '2':
+++    std::cout << "Please input values in Miles: ";
+++    std::cin >> mile;
+++    m2k = mile / 0.62137;
+++    std::cout << mile << " in Kilometers is: " << m2k;
+++    std::cout << std::endl;
+++    break;
+++
+++default:
+++
+++    std::cout << "Invalid Choice! Please rerun the program and try again..";
+++    break;
+ +}
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/divisibilityproblem.cpp b/divisibilityproblem.cpp
++index 1c0764e..e29eb43 100644
++--- a/divisibilityproblem.cpp
+++++ b/divisibilityproblem.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -20,4 +21,28 @@ int main()
++         }   
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int t;
+++    cin >> t;
+++    while (t--)
+++    {
+++        int a, b;
+++        cin >> a >> b;
+++        if(a % b == 0)
+++        {
+++            cout << 0 << endl;
+++        }
+++        else
+++        {
+++            cout << b - (a % b) << endl;
+++        }   
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/dominopiling.cpp b/dominopiling.cpp
++index 8cf2f57..e8d7c76 100644
++--- a/dominopiling.cpp
+++++ b/dominopiling.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -6,4 +7,14 @@ int main()
++     std::cin >> M >> N;
++     std::cout << M * N / 2 << std::endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    int M, N;
+++    std::cin >> M >> N;
+++    std::cout << M * N / 2 << std::endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/drinks.cpp b/drinks.cpp
++index 064ac02..ac8954e 100644
++--- a/drinks.cpp
+++++ b/drinks.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <iomanip>
++ 
++@@ -22,4 +23,30 @@ int main()
++     cout.precision(4); 
++     cout << avg << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <iomanip>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n;
+++    float sum = 0, avg;
+++    cin >> n;
+++    int arr[100];
+++    for(int i = 0; i < n; i++)
+++    {
+++        cin >> arr[i];
+++    }
+++    for(int i = 0; i < n; i++)
+++    {
+++        sum += arr[i];
+++    }
+++    avg = sum / n;
+++    cout << fixed;
+++    cout.precision(4); 
+++    cout << avg << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
+ \ No newline at end of file
+-diff --git a/majorityElement_gfg.exe b/majorityElement_gfg.exe
+-new file mode 100644
+-index 0000000..3778f47
+-Binary files /dev/null and b/majorityElement_gfg.exe differ
+-diff --git a/removeElement_leetcode.cpp b/removeElement_leetcode.cpp
+-new file mode 100644
+-index 0000000..e69de29
+-diff --git a/smallerNumbersThanCurrent_leetcode.cpp b/smallerNumbersThanCurrent_leetcode.cpp
+-new file mode 100644
+-index 0000000..20b818a
+---- /dev/null
+-+++ b/smallerNumbersThanCurrent_leetcode.cpp
+-@@ -0,0 +1,38 @@
+-+#include <bits/stdc++.h>
+-+using namespace std;
+-+
+-+vector<int> smallerNumbersThanCurrent(vector<int>& nums)
+-+{
+-+	ios::sync_with_stdio(0);
+-+	cin.tie(0), cout.tie(0);
+-+	std::map<int, int> helper;
+-+	std::vector<int> vec(nums.begin(), nums.end());
+-+	sort (vec.begin(), vec.end());
+-+	for (int i = nums.size() - 1; i >= 0; i--)
+-+	{
+-+		helper[vec[i]] = i;
+-+	}
+-+	for (int i = 0; i < nums.size(); i++)
+-+	{
+-+		nums[i] = helper[nums[i]];
+-+	}
+-+	for (auto x : nums)
+-+	{
+-+		cout << x << " ";
+-+	}
+-+	return nums;
++diff --git a/elephant.cpp b/elephant.cpp
++index 76d2387..decd364 100644
++--- a/elephant.cpp
+++++ b/elephant.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -14,4 +15,22 @@ int main()
++     }
++     cout << ans << endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, ans(0);
+++    cin >> n;
+++    int a[] = {5, 4, 3, 2, 1};
+++    for(int i = 0; i < 5; i++)
+++    {
+++        ans = ans + n / a[i];
+++        n = n % a[i];
+++    }
+++    cout << ans << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/factorial.cpp b/factorial.cpp
++index a5052e9..0f1e81a 100644
++--- a/factorial.cpp
+++++ b/factorial.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -16,4 +17,24 @@ int main()
++         cout << fact << " ";
++     }
++     cout << "The Factorial is: " << fact << endl;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int startRange, endRange, fact = 1;
+++    cout << "Enter a starting number: ";
+++    cin >> startRange;
+++    cout << endl;
+++    cout <<"Enter the ending number: ";
+++    cin >> endRange;
+++
+++    for (int i = startRange; i <= endRange; i++)
+++    {
+++        fact = fact * startRange;
+++        cout << fact << " ";
+++    }
+++    cout << "The Factorial is: " << fact << endl;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/fibonacciseries.cpp b/fibonacciseries.cpp
++index 17f60e8..5a54ca8 100644
++--- a/fibonacciseries.cpp
+++++ b/fibonacciseries.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -26,4 +27,34 @@ int main()
++         cout << fibb << " , ";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int64_t number, term1 = 0, term2 = 1, fibb;
+++    cout << "Enter the number for which you want to print the Fibonacci Series: ";
+++    cin >> number;
+++
+++    for (int i = 1; i <= number; i++)
+++    {
+++        if (i == 1)
+++        {
+++            cout << term1 << " , ";
+++            continue;
+++        }
+++        if (i == 2)
+++        {
+++            cout << term2 << " , ";
+++            continue;
+++        }
+++        fibb = term1 + term2;
+++        term1 = term2;
+++        term2 = fibb;
+++
+++        cout << fibb << " , ";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/georgeandaccommodation.cpp b/georgeandaccommodation.cpp
++index 21bcae0..1fdfcc7 100644
++--- a/georgeandaccommodation.cpp
+++++ b/georgeandaccommodation.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -17,4 +18,25 @@ int main()
++     }
++     cout << ans << endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, ans(0);
+++    cin >> n;
+++    for(int i = 0; i < n; i++)
+++    {
+++        int p, q;
+++        cin >> p >> q;
+++        if(q - p >= 2)
+++        {
+++            ans++;
+++        }
+++    }
+++    cout << ans << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/greatestofthree.cpp b/greatestofthree.cpp
++index 9fb8b4b..315b405 100644
++--- a/greatestofthree.cpp
+++++ b/greatestofthree.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -27,4 +28,35 @@ int main()
++     }
++     cout << endl;
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int num1, num2, num3;
+++    cout << "Enter number 1: ";
+++    cin >> num1;
+++    cout << endl;
+++    cout << "Enter number 2: ";
+++    cin >> num2;
+++    cout << endl;
+++    cout << "Enter number 3: ";
+++    cin >> num3;
+++
+++    if (num1 > num2 && num1 > num3)
+++    {
+++        cout << num1 << " is greater than " << num2 << " & " << num3;
+++    }
+++    else if (num2 > num1 && num2 > num3)
+++    {
+++        cout << num2 << " is greater than " << num1 << " & " << num3;
+++    }
+++    else
+++    {
+++        cout << num3 << " is greater than " << num1 << " & " << num2;
+++    }
+++    cout << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/hcf.cpp b/hcf.cpp
++index 88c2647..5d20bbe 100644
++--- a/hcf.cpp
+++++ b/hcf.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -39,4 +40,47 @@ int main()
++     cout << "Least Common Divisor is: " << lcm;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int num1, num2, hcf, lcm;
+++    
+++    cout << "Enter the first number: ";
+++    cin >> num1;
+++    
+++    cout << endl;
+++
+++    cout << "Enter the second number: ";
+++    cin >> num2;
+++
+++    if(num1 == 0 || num2 == 0)
+++    {
+++        cout << "Please enter non zero values";
+++        return 0;
+++    }
+++
+++    if (num1 > num2)
+++    {
+++        int temp = num1;
+++        num2 =  num1;
+++        num1 = temp;
+++    }
+++
+++    for (int i = 1; i <= num2; i++)
+++    {
+++        if(num1 % i == 0 && num2 % i == 0)
+++        {
+++            hcf = i;
+++        }
+++    }
+++    cout << "HCF or GCD is: " << hcf;
+++    lcm = (num1 * num2)/hcf;
+++    cout << endl;
+++    cout << "Least Common Divisor is: " << lcm;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/helpfulmaths.cpp b/helpfulmaths.cpp
++index cc54618..2d09aab 100644
++--- a/helpfulmaths.cpp
+++++ b/helpfulmaths.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <algorithm>
++@@ -20,4 +21,28 @@ int main()
++         std::cout << "+"<<newsum[i];
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <algorithm>
+++
+++int main()
+++{
+++    std::string sum, newsum;
+++    std::cin >> sum;
+++
+++    for (int i =0;i<sum.size();i++)
+++    {
+++        if(sum[i] != '+')
+++        {
+++            newsum.push_back(sum[i]);
+++        }
+++    }
+++    std::sort(newsum.begin(), newsum.end());
+++    std::cout << newsum[0];
+++    for(int i = 1; i <newsum.length();i++){
+++        std::cout << "+"<<newsum[i];
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/heronsformula.cpp b/heronsformula.cpp
++index 38e126b..437259f 100644
++--- a/heronsformula.cpp
+++++ b/heronsformula.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -23,3 +24,30 @@ int main()
++ 
++     return 0;
++ }
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++int main()
+++{
+++    float s, side1, side2, side3, heron;
+++
+++    std::cout << "Enter the first side of the triangle: ";
+++    std::cin >> side1;
+++    std::cout << std::endl;
+++    std::cout << "Enter the second side of the traingle: ";
+++    std::cin >> side2;
+++    std::cout << std::endl;
+++    std::cout << "Enter the third side of the traingle: ";
+++    std::cin >> side3;
+++    std::cout << std::endl;
+++
+++    s = (side1 + side2 + side3) / 2;
+++
+++    heron = sqrt(s * (s - side1) * (s - side2) * (s - side3));
+++
+++    std::cout << "The area of the triangle using Heron's Formula is: " << heron << std::endl;
+++
+++    return 0;
+ +}
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++diff --git a/hexagonarea.cpp b/hexagonarea.cpp
++index f808fe1..7df08e9 100644
++--- a/hexagonarea.cpp
+++++ b/hexagonarea.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -12,4 +13,20 @@ int main()
++     std::cout << "The area of the Hexagon is: " << area << std::endl;
++ 
++     return 0; 
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++int main()
+++{
+++    float area, side;
+++    std::cout << "Enter the length of the side: ";
+++    std::cin >> side;
+++
+++    area = ((3 * sqrt(3)) / 2 ) * (side * side);
+++
+++    std::cout << "The area of the Hexagon is: " << area << std::endl;
+++
+++    return 0; 
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/horseshoeontheotherroof.cpp b/horseshoeontheotherroof.cpp
++index 54f403c..83fe777 100644
++--- a/horseshoeontheotherroof.cpp
+++++ b/horseshoeontheotherroof.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <set>
++ 
++@@ -14,4 +15,22 @@ int main()
++     }
++     cout << 4 - s.size();
++     return 0;
+++=======
+++#include <iostream>
+++#include <set>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    long long x;
+++    set<long long> s;
+++    for(int i = 0; i < 4; i++)
+++    {
+++        cin >> x;
+++        s.insert(x);
+++    }
+++    cout << 4 - s.size();
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/hulk.cpp b/hulk.cpp
++index a36d479..2c7f39f 100644
++--- a/hulk.cpp
+++++ b/hulk.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -30,4 +31,38 @@ int main()
++     s += "it";
++     cout << s << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n;
+++    cin >> n;
+++    string s = "";
+++    for(int i = 0; i < n; i++)
+++    {
+++        if(i % 2 == 0 && i != n - 1)
+++        {
+++            s += "I hate that ";
+++        }
+++        else if(i % 2 == 1 && i != n - 1)
+++        {
+++            s += "I love that ";
+++        }
+++        else if(i % 2 == 0)
+++        {
+++            s += "I hate ";
+++        }
+++        else if(i % 2 == 1)
+++        {
+++            s += "I love ";
+++        }
+++    }
+++    s += "it";
+++    cout << s << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/insearchforeasyproblem.cpp b/insearchforeasyproblem.cpp
++index 64921d6..db36a66 100644
++--- a/insearchforeasyproblem.cpp
+++++ b/insearchforeasyproblem.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -21,4 +22,29 @@ int main()
++         cout << "EASY";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, c(0);
+++    cin >> n;
+++    for(int i = 0; i < n; i++)
+++    {
+++        int x;
+++        cin >> x;
+++        c += x;
+++    }
+++    if (c)
+++    {
+++        cout << "HARD";
+++    }
+++    else
+++    {
+++        cout << "EASY";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/insomniacure.cpp b/insomniacure.cpp
++index 31a7db1..df583a0 100644
++--- a/insomniacure.cpp
+++++ b/insomniacure.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <algorithm>
++ 
++@@ -18,4 +19,26 @@ int main()
++     } 
++     cout << count(arr, arr+d, 1);
++     return 0;
+++=======
+++#include <iostream>
+++#include <algorithm>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int k, l, m, n, d;
+++    cin >> k >> l >> m >> n >> d;
+++    bool arr[d];
+++    for (int i = 0; i < d; i++)
+++    {
+++        if(!((i + 1) % k) || !((i + 1) % l) || !((i + 1) % m) || !((i + 1) % n))arr[i] = 1;
+++        else
+++        {
+++            arr[i] = 0;
+++        }    
+++    } 
+++    cout << count(arr, arr+d, 1);
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/interestcalculator.cpp b/interestcalculator.cpp
++index 2e8a766..d0234e4 100644
++--- a/interestcalculator.cpp
+++++ b/interestcalculator.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -45,3 +46,52 @@ int main()
++         break;
++     }
++ }
+++=======
+++#include <iostream>
+++#include <cmath>
+ +
+ +int main()
+ +{
+-+	vector<int> nums;
+-+	int n, a;
+-+	cin >> n;
+-+	for (int i = 0; i < n; i++)
+-+	{
+-+		cin >> a;
+-+		nums.push_back(a);
+-+	}
+-+	smallerNumbersThanCurrent(nums);
+-+	return 0;
+++    long double si, ci, p, r, t, amount;
+++    char choice;
+++    std::cout << "########## Welcome to Interest Calcultor ##########";
+++    std::cout << std::endl;
+++    std::cout << "1. Simple Interest";
+++    std::cout << std::endl;
+++    std::cout << "2. Compound Interest";
+++    std::cout << std::endl;
+++
+++    std::cout << "Please input your choice: ";
+++    std::cin >> choice;
+++
+++    switch (choice)
+++    {
+++    case '1':
+++        std::cout << "Simple Interest Calculator" << std::endl;
+++        std::cout << "Enter the Principal Amount: ";
+++        std::cin >> p;
+++        std::cout << "Enter the Rate of Interest: ";
+++        std::cin >> r;
+++        std::cout << "Enter the Time duration: ";
+++        std::cin >> t;
+++        si = (p * r * t)/100;
+++        std::cout << "The Simple Interest is: " << si << std::endl;
+++        break;
+++    case '2':
+++        std::cout << "Compound Interest Calculator" << std::endl;
+++        std::cout << "Enter the Principal Amount: ";
+++        std::cin >> p;
+++        std::cout << "Enter the Rate of Interest: ";
+++        std::cin >> r;
+++        std::cout << "Enter the Time duration: ";
+++        std::cin >> t;
+++        amount = p * (pow(1 + r / 100, t));
+++        ci = amount - p;
+++        std::cout << "The Compound Interest is: " << ci << std::endl;
+++        break;
+++    default:
+++        std::cout << "Invalid Input! Please try again..";
+++        break;
+++    }
+ +}
+-diff --git a/smallerNumbersThanCurrent_leetcode.exe b/smallerNumbersThanCurrent_leetcode.exe
+-new file mode 100644
+-index 0000000..bb34f72
+-Binary files /dev/null and b/smallerNumbersThanCurrent_leetcode.exe differ
 \ No newline at end of file
-diff --git a/defangedIPAdress_leetcode.exe b/defangedIPAdress_leetcode.exe
-new file mode 100644
-index 0000000..37a8088
-Binary files /dev/null and b/defangedIPAdress_leetcode.exe differ
-diff --git a/file.cpp b/file.cpp
-new file mode 100644
-index 0000000..e69de29
-diff --git a/fractionResult_gfg.cpp b/fractionResult_gfg.cpp
-new file mode 100644
-index 0000000..99dc428
---- /dev/null
-+++ b/fractionResult_gfg.cpp
-@@ -0,0 +1,39 @@
-+#include <bits/stdc++.h>
-+using namespace std;
-+
-+string fractiontoDecimal(int numerator, int denominator)
-+{
-+	int whole = numerator / denominator;
-+	int decimal = numerator % denominator;
-+	string ans = to_string(whole);
-+	if (decimal == 0) return ans;
-+	unordered_map<int, int> mp;
-+	mp.clear();
-+	ans += ".";
-+	while (decimal != 0)
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++diff --git a/iwannabetheguy.cpp b/iwannabetheguy.cpp
++index 2e10423..ff50fb0 100644
++--- a/iwannabetheguy.cpp
+++++ b/iwannabetheguy.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ #include <set>
++@@ -58,4 +59,66 @@ int main()
++         cout << "Oh, my keyboard!";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+++#include <set>
+++#include <algorithm>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n;
+++    int p, q;
+++    int counter = 0;
+++    set<int>levels;
+++    set<int>::iterator t1;
+++    set<int>::iterator t2;
+++    cin >> n;
+++    cin >> p;
+++    if (p != 0)
+++    {
+++        for (int i = 0; i < p; i++)
+++        {
+++            int x;
+++            cin >> x;
+++            levels.insert(x);
+++        }
+++    }
+++    cin >> q;
+++    if (q != 0)
+++    {
+++        for (int i = 0; i < q; i++)
+++        {
+++            int x;
+++            cin >> x;
+++            levels.insert(x);
+++        }
+++    }
+++    if (p || q != 0)
+++    {
+++        t1 = levels.begin();
+++        for (int i = 1; i <= n; i++, t1++)
+++        {
+++            if(*t1 == i)
+++            {
+++                counter++;
+++            }
+++        }
+++        if (counter == n)
+++        {
+++            cout << "I become the guy.";
+++        }
+++        else
+++        {
+++            cout << "Oh, my keyboard!";
+++        }
+++    }
+++    if (!p&&!q)
+++    {
+++        cout << "Oh, my keyboard!";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/leapyearchecker.cpp b/leapyearchecker.cpp
++index 61dc8b6..918d2f2 100644
++--- a/leapyearchecker.cpp
+++++ b/leapyearchecker.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -30,4 +31,38 @@ int main()
++         cout << ly << " is not a Leap Year..";
++     }
++ 
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int ly;
+++    cout << "Enter the year to check: ";
+++    cin >> ly;
+++
+++    if (ly % 4 == 0)
+++    {
+++        if(ly % 100 == 0) 
+++        {
+++            if (ly % 400 == 0)
+++            {
+++                cout << ly <<" is a Leap Year.";
+++            }
+++            else
+++            {
+++                cout << ly << " is not a Leap Year.";
+++            }
+++        }      
+++        else
+++            {
+++                cout << ly << " is a Leap Year.";
+++            }
+++    }
+++    else
+++    {
+++        cout << ly << " is not a Leap Year..";
+++    }
+++
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/magnets.cpp b/magnets.cpp
++index 069c87d..b18cb28 100644
++--- a/magnets.cpp
+++++ b/magnets.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -21,4 +22,29 @@ int main()
++     }
++     cout << counter << endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n;
+++    int counter = 1;
+++    cin >> n;
+++    int ar[n+1];
+++    for (int i = 0; i < n; i++)
+++    {
+++        cin >> ar[i];
+++    }
+++    for (int i = 0; i < n - 1; i++)
+++    {
+++        if(ar[i] != ar[i+1])
+++        {
+++            counter++;
+++        }
+++    }
+++    cout << counter << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/multiplicationtable.cpp b/multiplicationtable.cpp
++index 91cc8aa..9cc15fa 100644
++--- a/multiplicationtable.cpp
+++++ b/multiplicationtable.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -17,4 +18,25 @@ int main()
++         cout << multiNumber << " * " << i << " = " << multiNumber * i << endl;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int multiNumber, length;
+++    cout << "Enter the number for which you want to generate the table: ";
+++    cin >> multiNumber;
+++
+++    cout << endl;
+++    
+++    cout << "Enter the number until which you want the table to be generated: ";
+++    cin >> length;
+++
+++    for (int i = 1; i <= length; i++)
+++    {
+++        cout << multiNumber << " * " << i << " = " << multiNumber * i << endl;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/nearlyluckynumbers.cpp b/nearlyluckynumbers.cpp
++index 345ef81..6596bd4 100644
++--- a/nearlyluckynumbers.cpp
+++++ b/nearlyluckynumbers.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <algorithm>
++@@ -27,4 +28,35 @@ int main()
++         cout << "NO";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <algorithm>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    long long n, c(0);
+++    cin >> n;
+++    string s = "";
+++    s += to_string(n);
+++    s.erase(remove(s.begin(), s.end(), '0'), s.end());
+++    for(int i = 0; i < s.length(); i++)
+++    {
+++        if(s[i] == '4' || s[i] == '7')
+++        {
+++            c++;
+++        }
+++    }
+++    if (c == 4 || c == 7)
+++    {
+++        cout << "YES";
+++    }
+++    else
+++    {
+++        cout << "NO";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/nextround.cpp b/nextround.cpp
++index 33dbaa3..a2ecec8 100644
++--- a/nextround.cpp
+++++ b/nextround.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -26,4 +27,34 @@ int main()
++     }
++     std::cout << n << std::endl;
++     return 0;   
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    int n, k;
+++    std::cin >> n >> k;
+++    int a;
+++    for(int i = 0; i < k; i++)
+++    {
+++        std::cin >> a;
+++        if(a == 0)
+++        {
+++            std::cout << i << std::endl;
+++            return 0;
+++        }
+++    }
+++    int b;
+++    for(int i = k; i < n; i++)
+++    {
+++        std::cin >> b;
+++        if(b != a)
+++        {
+++            std::cout << i << std::endl;
+++            return 0;
+++        }
+++    }
+++    std::cout << n << std::endl;
+++    return 0;   
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/numberchecker.cpp b/numberchecker.cpp
++index 2311933..2bff5d7 100644
++--- a/numberchecker.cpp
+++++ b/numberchecker.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -19,4 +20,27 @@ int main()
++         std::cout << "The Number is ZERO";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    int64_t digit;
+++    std::cout << "Enter a number to check if it is Positive, Negetive or Zero: ";
+++    std::cin >> digit;
+++
+++    if (digit > 0)
+++    {
+++        std::cout << "The Number is Postive" << std::endl; 
+++    }
+++    else if (digit < 0)
+++    {
+++        std::cout << "The Number is Negative" << std::endl;
+++    }
+++    else
+++    {
+++        std::cout << "The Number is ZERO";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/numberswap.cpp b/numberswap.cpp
++index bdf6cb1..ea62e82 100644
++--- a/numberswap.cpp
+++++ b/numberswap.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -19,4 +20,27 @@ int main()
++ 
++     cout << "After Swapping: " << endl << "a = " << a << endl << "b = " << b;
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int a, b, temp;
+++    cout << "Enter a first number: ";
+++    cin >> a;
+++    cout << endl;
+++    cout << "Enter the second number: ";
+++    cin >> b;
+++
+++    cout << "Before Swapping: " << endl << "a = " << a << endl << "b = " << b;
+++
+++    temp = a;
+++    a = b;
+++    b = temp;
+++    cout << endl;
+++
+++    cout << "After Swapping: " << endl << "a = " << a << endl << "b = " << b;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/oddandeven.cpp b/oddandeven.cpp
++index 7f0f30c..8c372ba 100644
++--- a/oddandeven.cpp
+++++ b/oddandeven.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -18,4 +19,26 @@ int main()
++         }
++     }
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int num1, num2;
+++    cout << "Enter the starting range: ";
+++    cin >> num1;
+++    cout << endl;
+++    cout << "Enter the ending range: ";
+++    cin >> num2;
+++
+++    for (int i = num1; i <= num2; i++)
+++    {
+++        if (i % 2 == 0)
+++        {
+++            cout << "[" << i << "]";
+++        }
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/pallindrome.cpp b/pallindrome.cpp
++index e537121..edd5df7 100644
++--- a/pallindrome.cpp
+++++ b/pallindrome.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -28,4 +29,36 @@ int main()
++         cout << "Number is not Pallindromic. ";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int number, reversenumber = 0, remainder;
+++    cout << "Enter a number to check if it is a Pallindromic Number: ";
+++    cin >> number;
+++
+++    int n = number;
+++
+++    do
+++    {
+++        remainder = number % 10;
+++        reversenumber = (reversenumber * 10) + remainder;
+++        number = number / 10;
+++    }
+++    while (number != 0);
+++    
+++    cout << "The reverse of the number is: " << reversenumber << endl;
+++    
+++    if (n == reversenumber)
+++    {
+++        cout << "Number is Pallindromic ";
+++    }
+++    else
+++    {
+++        cout << "Number is not Pallindromic. ";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/petyaandstrings.cpp b/petyaandstrings.cpp
++index fd84010..de2f846 100644
++--- a/petyaandstrings.cpp
+++++ b/petyaandstrings.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <cctype>
++@@ -12,4 +13,20 @@ int main()
++     transform(s2.begin(), s2.end(), s2.begin(), ::tolower);
++     std::cout << strcmp(s1.c_str(), s2.c_str()) << std::endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <cctype>
+++#include <algorithm>
+++#include <cstring>
+++
+++int main()
+++{
+++    std::string s1, s2;
+++    std::cin >> s1 >> s2;
+++    transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
+++    transform(s2.begin(), s2.end(), s2.begin(), ::tolower);
+++    std::cout << strcmp(s1.c_str(), s2.c_str()) << std::endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/polygonarea.cpp b/polygonarea.cpp
++index 8e0ef09..3c73747 100644
++--- a/polygonarea.cpp
+++++ b/polygonarea.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -16,4 +17,24 @@ int main()
++     std::cout << "The area of the given polygon is: " << area << std::endl;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++int main()
+++{
+++    float l, n, area;
+++    std::cout << "Enter the length of the side L: ";
+++    std::cin >> l;
+++    std::cout << std::endl;
+++    std::cout << "Enter the number of sides n: ";
+++    std::cin >> n;
+++    std::cout << std::endl;
+++
+++    area = (n * (l * l))/(tan(M_PI/n) * 4);
+++
+++    std::cout << "The area of the given polygon is: " << area << std::endl;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/powerofanumber.cpp b/powerofanumber.cpp
++index 7605d11..50c2746 100644
++--- a/powerofanumber.cpp
+++++ b/powerofanumber.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -21,4 +22,29 @@ int main()
++     cout << result;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int exponent;
+++    float base, result = 1;
+++    cout << "Enter the base value: ";
+++    cin >> base;
+++
+++    cout << "Enter the exponential value: ";
+++    cin >> exponent;
+++
+++    cout << base << " ^ " << exponent << " = ";
+++
+++    while (exponent != 0)
+++    {
+++        result = result * base;
+++        exponent--;
+++    }
+++    cout << result;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/presents.cpp b/presents.cpp
++index e668dda..03b5a98 100644
++--- a/presents.cpp
+++++ b/presents.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <vector>
++ 
++@@ -20,4 +21,28 @@ int main()
++     }
++     cout << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <vector>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, p;
+++    cin >> n;
+++    vector<int> f(n+1);
+++    for (int i = 1; i <= n; i++)
+++    {
+++        cin >> p;
+++        f[p] = i;
+++    }
+++    cout << f[1];
+++    for (int i = 2; i <= n; i++)
+++    {
+++        cout << " " << f[i];
+++    }
+++    cout << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/primebasics.cpp b/primebasics.cpp
++index 8a4becb..9915300 100644
++--- a/primebasics.cpp
+++++ b/primebasics.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -21,4 +22,29 @@ int main()
++         cout << "Number is not Prime";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int number, repeater = 1, count = 0;
+++    cout << "Enter a number to check if it's Prime: ";
+++    cin >> number;
+++
+++    for(int i = repeater; repeater <= number; repeater++)
+++    {
+++        if (number % repeater == 0)
+++        count++;
+++    }
+++    if (count == 2)
+++    {
+++        cout << "Number is Prime";
+++    }
+++    else
+++    {
+++        cout << "Number is not Prime";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/queueattheschool.cpp b/queueattheschool.cpp
++index a4b2673..e51e000 100644
++--- a/queueattheschool.cpp
+++++ b/queueattheschool.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -22,4 +23,30 @@ int main()
++     }
++     cout << s;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, t;
+++    string s;
+++    cin >> n >> t;
+++    cin >> s;
+++    for(int i = 0; i < t; i++)
+++    {
+++        for(int j = 1; j < n; j++)
+++        {
+++            if(s[j-1] == 'B' && s[j] == 'G')
+++            {
+++                swap(s[j-1], s[j]);
+++                j++;
+++            }
+++        }
+++    }
+++    cout << s;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/rectanglearea.cpp b/rectanglearea.cpp
++index 9201bd9..e1bd1bc 100644
++--- a/rectanglearea.cpp
+++++ b/rectanglearea.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -21,4 +22,29 @@ int main()
++     cout << "The area of the rectangle is: " << area << " & the perimeter is: " << perimeter << endl;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int64_t area, perimeter, l, b;
+++
+++    cout << "Enter the Length of the rectangle: ";
+++    cin >> l;
+++
+++    cout << endl;
+++
+++    cout << "Enter the width of the rectangle: ";
+++    cin >> b;
+++
+++    area = l * b;
+++    perimeter = 2 * (l * b);
+++
+++    cout << endl;
+++
+++    cout << "The area of the rectangle is: " << area << " & the perimeter is: " << perimeter << endl;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/reversednumber.cpp b/reversednumber.cpp
++index 2001c6c..15614e9 100644
++--- a/reversednumber.cpp
+++++ b/reversednumber.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -16,4 +17,24 @@ int main()
++     cout << "Reversed Number is " << revnum;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int number, remainder, revnum = 0;
+++    cout << "Enter the number to reverse it: ";
+++    cin >> number;
+++
+++    while (number != 0)
+++    {
+++        remainder = number % 10;
+++        revnum = revnum * 10 + remainder;
+++        number = number / 10;
+++    }
+++    cout << "Reversed Number is " << revnum;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/scalenetrainglearea.cpp b/scalenetrainglearea.cpp
++index e1a4bde..9401778 100644
++--- a/scalenetrainglearea.cpp
+++++ b/scalenetrainglearea.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -16,4 +17,24 @@ int main()
++     std::cout << "The area of the triangle is: " << area << std::endl;
++     return 0;
++     
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    float height, breath, area;
+++    std::cout << "Please enetr the value of Height H: ";
+++    std::cin >> height;
+++    std::cout << std::endl;
+++
+++    std::cout << "Enter the value of Breath B: ";
+++    std::cin >> breath;
+++    std::cout << std::endl;
+++
+++    area = 0.5 * height * breath;
+++
+++    std::cout << "The area of the triangle is: " << area << std::endl;
+++    return 0;
+++    
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/soldierandbananas.cpp b/soldierandbananas.cpp
++index 21c4e7d..693ebfc 100644
++--- a/soldierandbananas.cpp
+++++ b/soldierandbananas.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -17,4 +18,25 @@ int main(){
++     }
++     cout << ans << endl;
++     return 0; 
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++using namespace std;
+++
+++int main(){
+++    long long int k, n, w, ans(0);
+++    cin >> k >> n >> w;
+++    for(int i = 0; i <= w; i++)
+++    {
+++        ans += i * k;
+++    }
+++    ans -= n;
+++    if(ans < 0)
+++    {
+++        ans = 0;
+++    }
+++    cout << ans << endl;
+++    return 0; 
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/stonesonthetable.cpp b/stonesonthetable.cpp
++index abd2cb9..7799d3e 100644
++--- a/stonesonthetable.cpp
+++++ b/stonesonthetable.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <algorithm>
++@@ -12,4 +13,20 @@ int main()
++     s.erase(unique(s.begin(), s.end()), s.end());
++     cout << n - s.length() << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <algorithm>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    size_t n;
+++    string s;
+++    cin >> n >> s;
+++    s.erase(unique(s.begin(), s.end()), s.end());
+++    cout << n - s.length() << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/stringmanipulation.cpp b/stringmanipulation.cpp
++index da49dad..358ff77 100644
++--- a/stringmanipulation.cpp
+++++ b/stringmanipulation.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -10,4 +11,18 @@ int main()
++     int len = fullName.size();
++     std::cout << len;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++int main()
+++{
+++    std::string fullName;
+++    std::cout << "Tell us about yourself: ";
+++    std::getline (std::cin, fullName);
+++    std::cout << "So what you said is: " << fullName << std::endl;
+++    int len = fullName.size();
+++    std::cout << len;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/sumofnaturalnumbers.cpp b/sumofnaturalnumbers.cpp
++index 73e9c9d..2aa6b3a 100644
++--- a/sumofnaturalnumbers.cpp
+++++ b/sumofnaturalnumbers.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -14,4 +15,22 @@ int main()
++     }
++     cout << "The total sum is: " << sum;
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int number, sum = 0;
+++    cout << "Enter the number to find the sum of previous Natural Numbers: ";
+++    cin >> number;
+++
+++    for (int i = 1; i <= number; i++)
+++    {
+++        cout << i << " + ";
+++        sum = sum + i;
+++    }
+++    cout << "The total sum is: " << sum;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/swapdigits.cpp b/swapdigits.cpp
++index 12ae9ec..3c7e262 100644
++--- a/swapdigits.cpp
+++++ b/swapdigits.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -22,4 +23,30 @@ int main()
++     reverseNumber = lastDigit * (pow(10, digit)) + (number * 10 + firstDigit);
++     std::cout << "The number after swapping First and Last digit is: " << reverseNumber << std::endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++int main()
+++{
+++    int firstDigit, lastDigit, digit, number, remainder, a, b, sum, reverseNumber;
+++    
+++    std::cout << "Enter the number to reverse it's first and last digit: ";
+++    std::cin >> number;
+++
+++    digit = (int)log10(number);
+++
+++    std::cout << digit << std::endl;
+++
+++    firstDigit = number / pow(10, digit);
+++    lastDigit = number % 10;
+++
+++    a = firstDigit * (pow(10, digit));
+++    b = number % a;
+++    number = b / 10;
+++
+++    reverseNumber = lastDigit * (pow(10, digit)) + (number * 10 + firstDigit);
+++    std::cout << "The number after swapping First and Last digit is: " << reverseNumber << std::endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/teams.cpp b/teams.cpp
++index 9e2f43e..c38444b 100644
++--- a/teams.cpp
+++++ b/teams.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -14,4 +15,22 @@ int main()
++     }
++     std::cout << number << std::endl;
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    int n, Petya, Vasya, Tonya, number(0);
+++    std::cin >> n;
+++    for(int i = 0; i < n; i++)
+++    {
+++        std::cin >> Petya >> Vasya >> Tonya;
+++        if(Petya + Vasya + Tonya >= 2)
+++        {
+++            number = number + 1;
+++        }
+++    }
+++    std::cout << number << std::endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/tempCodeRunnerFile.cpp b/tempCodeRunnerFile.cpp
++index a34fb71..691e63e 100644
++--- a/tempCodeRunnerFile.cpp
+++++ b/tempCodeRunnerFile.cpp
++@@ -1 +1,5 @@
+++<<<<<<< HEAD
++                 // vasya++;
+++=======
+++// break;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++diff --git a/temperatureconversion.cpp b/temperatureconversion.cpp
++index 382753e..1ccaf63 100644
++--- a/temperatureconversion.cpp
+++++ b/temperatureconversion.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -65,4 +66,73 @@ int main()
++         break;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    float f, c, k, f2c, c2f, c2k, k2c, f2k, k2f;
+++    char choice;
+++    std::cout << "Welcome to temperature conversion: Please choose the options accordingly ";
+++    std::cout << std::endl;
+++    std::cout << "1. Fahrenheit to Celcius.";
+++    std::cout << std::endl;
+++    std::cout << "2. Celcius to Fahrenheit.";
+++    std::cout << std::endl;
+++    std::cout << "3. Fahrenheit to Kelvin";
+++    std::cout << std::endl;
+++    std::cout << "4. Kelvin to Fahrenheit.";
+++    std::cout << std::endl;
+++    std::cout << "5. Celcius to Kelvin";
+++    std::cout << std::endl;
+++    std::cout << "6. Kelvin to Celcius.";
+++    std::cout << std::endl;
+++    std::cout << "Please enter a choice: ";
+++    std::cin >> choice;
+++
+++    switch (choice)
+++    {
+++    case '1':
+++        std::cout << "Enter the tempereature in Fahrenheit: ";
+++        std::cin >> f;
+++        f2c = 0.56 * (f - 32);
+++        std::cout << f << " in Celcius is: " << f2c;
+++        break;
+++    case '2':
+++        std::cout << "Enter the tempereature in Celcius: ";
+++        std::cin >> c;
+++        c2f = 1.8 * c + 32;
+++        std::cout << c << " in Fahrenheit is: " << c2f;
+++        break;
+++    case '3':
+++        std::cout << "Enter the tempereature in Fahrenheit: ";
+++        std::cin >> f;
+++        f2k = 0.56 * (f - 32) + 273;
+++        std::cout << f << " in Kelvin is: " << f2k;
+++        break;
+++    case '4':
+++        std::cout << "Enter the tempereature in Kelvin: ";
+++        std::cin >> k;
+++        k2f = 1.8 * (k - 273) + 32;
+++        std::cout << f << " in Fahrenheit is: " << k2f;
+++        break;
+++    case '5':
+++        std::cout << "Enter the tempereature in Celcius: ";
+++        std::cin >> c;
+++        c2k = c + 273;
+++        std::cout << c << " in Fahrenheit is: " << c2k;
+++        break;
+++    case '6':
+++        std::cout << "Enter the tempereature in Kelvin: ";
+++        std::cin >> k;
+++        k2c = k - 273;
+++        std::cout << k << " in Celcius is: " << k2c;
+++        break;
+++    
+++    default:
+++        std::cout << "Invalid Choice! Re run the program again..";
+++        break;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/thirdanglefinder.cpp b/thirdanglefinder.cpp
++index 44163fa..876bffa 100644
++--- a/thirdanglefinder.cpp
+++++ b/thirdanglefinder.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -19,4 +20,27 @@ int main()
++     std::cout << "The third angle of the traingle after calculations is: " << thirdangle << std::endl;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    int firstangle, secondangle, thirdangle;
+++
+++    std::cout << "Enter the first angle of the traingle: ";
+++    std::cin >> firstangle;
+++
+++    std::cout << std::endl;
+++
+++    std::cout << "Enter the second angle of the triangle: ";
+++    std::cin >> secondangle;
+++
+++    std::cout << std::endl;
+++
+++    thirdangle = 180 - (firstangle + secondangle);
+++    
+++    std::cout << "The third angle of the traingle after calculations is: " << thirdangle << std::endl;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/totalandaverage.cpp b/totalandaverage.cpp
++index 74f9af4..a816381 100644
++--- a/totalandaverage.cpp
+++++ b/totalandaverage.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -23,4 +24,31 @@ int main()
++     std::cout << "The total of the entered numbers is: " << total << " & the average is: " << average << std::endl;
++     return 0;
++     
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    float a, b, c, d, total, average;
+++
+++    std::cout << "Enter the value of A: ";
+++    std::cin >> a;
+++    std::cout << std::endl;
+++    std::cout << "Enter the value of B: ";
+++    std::cin >> b;
+++    std::cout << std::endl;
+++    std::cout << "Enter the value of C: ";
+++    std::cin >> c;
+++    std::cout << std::endl;
+++    std::cout << "Enter the value of D: ";
+++    std::cin >> d;
+++    std::cout << std::endl;
+++
+++    total = a + b + c + d;
+++    average = (a + b + c + d)/4;
+++
+++    std::cout << "The total of the entered numbers is: " << total << " & the average is: " << average << std::endl;
+++    return 0;
+++    
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/tram.cpp b/tram.cpp
++index 3a7c706..bd43e6f 100644
++--- a/tram.cpp
+++++ b/tram.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -15,4 +16,23 @@ int main()
++     }
++     cout << c;
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, a, b, c(0), d(0);
+++    cin >> n;
+++    for(int i = 0; i < n; i++)
+++    {
+++        cin >> a >> b;
+++        d -= a;
+++        d += b;
+++        c = max(c, d);
+++    }
+++    cout << c;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/translation.cpp b/translation.cpp
++index 8801298..32854f3 100644
++--- a/translation.cpp
+++++ b/translation.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <algorithm>
++@@ -18,4 +19,26 @@ int main()
++         cout << "NO";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <algorithm>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    string s, t;
+++    cin >> s >> t;
+++    reverse(s.begin(), s.end());
+++    if( s == t)
+++    {
+++        cout << "YES";
+++    }
+++    else
+++    {
+++        cout << "NO";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/twinprimesfinder.cpp b/twinprimesfinder.cpp
++index c19b5b6..0e26401 100644
++--- a/twinprimesfinder.cpp
+++++ b/twinprimesfinder.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <cmath>
++ 
++@@ -26,4 +27,34 @@ int main() {
++             }
++     }
++     return 0;
+++=======
+++#include <iostream>
+++#include <cmath>
+++
+++int main() {
+++    const int num_primes = 10005;
+++    bool primes[num_primes];
+++    for (int i = 2; i != num_primes; ++i) {
+++        primes[i] = true;
+++    }
+++
+++    for (int i = 2; i != int(sqrt(num_primes)); ++i) {
+++        if (primes[i]) {        
+++            for (int j = 2; i * j < num_primes; ++j) {
+++                primes[i*j] = false;
+++            }
+++        }
+++    }
+++    int n;
+++	std::cout << "Input an integer: ";
+++    std::cin >> n;
+++	std::cout << "Twin primes are: ";
+++        for (int i = n; i - 2 >= 0; --i) {
+++            if (primes[i] && primes[i - 2]) {
+++                std::cout << i - 2 << " " << i << std::endl;
+++                break;
+++            }
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/typecasting.cpp b/typecasting.cpp
++index 5c58216..e1310da 100644
++--- a/typecasting.cpp
+++++ b/typecasting.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -27,4 +28,35 @@ int main()
++     std::cout << "The sum (after typecasting to char) is: " << (char)sum;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    float num1, num2, sum;
+++
+++    std::cout << "Enter the first number: ";
+++    std::cin >> num1;
+++    std::cout << std::endl;
+++    std::cout << "Enter the second number: ";
+++    std::cin >> num2;
+++    std::cout << std::endl;
+++
+++    sum = num1 + num2;
+++
+++    std::cout << "The sum is: " << sum << std::endl;
+++
+++    std::cout << "The sum (after typecasting to int) is: " << (int)sum;
+++    std::cout << std::endl;
+++
+++    std::cout << (char)num1 << " is the num1 value in Char";
+++    std::cout << std::endl;
+++    std::cout << (char)num2 << " is the num2 value in Char";
+++    std::cout << std::endl;
+++    
+++    
+++    std::cout << "The sum (after typecasting to char) is: " << (char)sum;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/ultrafastmathematician.cpp b/ultrafastmathematician.cpp
++index 3ba3746..b5fc7f8 100644
++--- a/ultrafastmathematician.cpp
+++++ b/ultrafastmathematician.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -20,4 +21,28 @@ int main()
++     }
++     cout << n << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    string n, m;
+++    cin >> n >> m;
+++    for (int i  = 0; i < n.length(); i++)
+++    {
+++        if(n[i] == m[i])
+++        {
+++            n[i] = '0';
+++        }
+++        else
+++        {
+++            n[i] = '1';
+++        }
+++    }
+++    cout << n << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/vanyaandfence.cpp b/vanyaandfence.cpp
++index 7b776f7..447b8d3 100644
++--- a/vanyaandfence.cpp
+++++ b/vanyaandfence.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ # include <iostream>
++ 
++ using namespace std;
++@@ -21,4 +22,29 @@ int main()
++     }
++     cout << ans << endl;
++     return 0;
+++=======
+++# include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n, h, ans(0);
+++    cin >> n >> h;
+++    int a[n+10];
+++    for(int i = 0; i < n; i++)
+++    {
+++        cin >> a[i];
+++        if(a[i] > h)
+++        {
+++            ans += 2;
+++        }
+++        else
+++        {
+++            ans += 1;
+++        }
+++    }
+++    cout << ans << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/volumcube.cpp b/volumcube.cpp
++index 1d08342..27070f4 100644
++--- a/volumcube.cpp
+++++ b/volumcube.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -14,4 +15,22 @@ int main()
++     cout << "The Volume of the cube is: " << cubevolume << endl;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int64_t side, cubevolume;
+++    cout << "Enter the length of the side: ";
+++    cin >> side;
+++
+++    cubevolume = side * side * side;
+++
+++    cout << endl;
+++
+++    cout << "The Volume of the cube is: " << cubevolume << endl;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/volumecylinder.cpp b/volumecylinder.cpp
++index 0fcbe63..319b9df 100644
++--- a/volumecylinder.cpp
+++++ b/volumecylinder.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -17,4 +18,25 @@ int main()
++     cout << "The Volume of the Cylinder is: " << cylindervolume << endl;
++ 
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int64_t height, radius, cylindervolume;
+++    cout << "Enter the radius of the cylinder: ";
+++    cin >> radius;
+++
+++    cout << endl;
+++
+++    cout << "Enter the Height of the cylinder: ";
+++    cin >> height;
+++
+++    cylindervolume = (3.1428 * (radius * radius) * height);
+++
+++    cout << "The Volume of the Cylinder is: " << cylindervolume << endl;
+++
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/volumesphere.cpp b/volumesphere.cpp
++index 05f7a89..4d37d76 100644
++--- a/volumesphere.cpp
+++++ b/volumesphere.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -11,4 +12,19 @@ int main()
++     volume = ((4 / 3) * 3.1428 * (radius * radius));
++ 
++     cout << "The Volume of the Sphere is: " << volume << endl;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    int64_t volume, radius;
+++
+++    cout << "Enter the Radius of the sphere: ";
+++    cin >> radius;
+++
+++    volume = ((4 / 3) * 3.1428 * (radius * radius));
+++
+++    cout << "The Volume of the Sphere is: " << volume << endl;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/vowelsorconsonants.cpp b/vowelsorconsonants.cpp
++index a386d43..0c6d513 100644
++--- a/vowelsorconsonants.cpp
+++++ b/vowelsorconsonants.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ using namespace std;
++ 
++@@ -25,4 +26,33 @@ int main()
++         cout << "The entered Character is a Consonant..";
++     }
++     return 0;
+++=======
+++#include <iostream>
+++using namespace std;
+++
+++int main()
+++{
+++    char s;
+++    bool isLowerCaseVowel, isUpperCaseVowel;
+++
+++    cout << "Enter a Character or an Alphabet: ";
+++    cin >> s;
+++
+++    isLowerCaseVowel = (s == 'a' || s == 'e' || s == 'i' || s == 'o' || s == 'u');
+++    isUpperCaseVowel = (s == 'A' || s == 'E' || s == 'I' || s == 'O' || s == 'U');
+++
+++    if (!isalpha(s))
+++    {
+++        cout << "Error! Non Alphabetic Character Detected..";
+++    }
+++    else if (isLowerCaseVowel || isUpperCaseVowel)
+++    {
+++        cout << "The entered Character is a Vowel..";
+++    }
+++    else
+++    {
+++        cout << "The entered Character is a Consonant..";
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/watermelondivision.cpp b/watermelondivision.cpp
++index 9a6c6cb..640fc54 100644
++--- a/watermelondivision.cpp
+++++ b/watermelondivision.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ int main()
++@@ -14,4 +15,22 @@ int main()
++         std::cout << "NO" << std::endl;
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++int main()
+++{
+++    int w;
+++    std::cin >> w;
+++
+++    if (w % 2 == 0 && w > 2)
+++    {
+++        std::cout << "YES" << std::endl;
+++    }
+++    else
+++    {
+++        std::cout << "NO" << std::endl;
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/way2longwords.cpp b/way2longwords.cpp
++index 72015bc..90ec33e 100644
++--- a/way2longwords.cpp
+++++ b/way2longwords.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -20,4 +21,28 @@ int main()
++         }
++     }
++     return 0;
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n;
+++    string s;
+++    cin >> n;
+++    for(int i = 0; i < n; i++)
+++    {
+++        cin >> s;
+++        if (s.length() > 10)
+++        {
+++            cout << s[0] << s.length() - 2 << s[s.length()-1] << endl;
+++        }
+++        else
+++        {
+++            cout << s << endl;
+++        }
+++    }
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/word.cpp b/word.cpp
++index cd911ca..f7e2818 100644
++--- a/word.cpp
+++++ b/word.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ #include <cctype>
++@@ -36,4 +37,44 @@ int main()
++     }
++     cout << s << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++#include <cctype>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    string s;
+++    cin >> s;
+++    int upper(0), lower(0);
+++    for (size_t i=0; i < s.length(); ++i)
+++    {
+++        if(isupper(s[i]))
+++        {
+++            upper += 1;
+++        }
+++        else
+++        {
+++            lower += 1;
+++        }
+++    }
+++    if (upper > lower)
+++    {
+++        for (size_t i=0; i < s.length(); ++i)
+++        {
+++            s[i] = toupper(s[i]);
+++        }
+++    }
+++    else
+++    {
+++        for (size_t i = 0; i < s.length(); ++i)
+++        {
+++            s[i] = tolower(s[i]);
+++        }
+++    }
+++    cout << s << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/wordcapitalization.cpp b/wordcapitalization.cpp
++index 419c859..c768868 100644
++--- a/wordcapitalization.cpp
+++++ b/wordcapitalization.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ #include <string>
++ 
++@@ -9,4 +10,17 @@ int main(){
++     s[0] = toupper(s[0]);
++     cout << s << endl;
++     return 0;
+++=======
+++#include <iostream>
+++#include <string>
+++
+++using namespace std;
+++
+++int main(){
+++    string s;
+++    cin >> s;
+++    s[0] = toupper(s[0]);
+++    cout << s << endl;
+++    return 0;
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
++diff --git a/wrongsubtraction.cpp b/wrongsubtraction.cpp
++index c13592d..af90e10 100644
++--- a/wrongsubtraction.cpp
+++++ b/wrongsubtraction.cpp
++@@ -1,3 +1,4 @@
+++<<<<<<< HEAD
++ #include <iostream>
++ 
++ using namespace std;
++@@ -21,4 +22,29 @@ int main()
++     }
++     cout << n << endl;
++     return 0; 
+++=======
+++#include <iostream>
+++
+++using namespace std;
+++
+++int main()
+++{
+++    int n(0), k(0), digit, result;
+++    cin >> n >> k;
+++
+++    for (int i = 1; i <= k; i++)
+++    {
+++        digit = n % 10;
+++        if (digit == 0)
+++        {
+++            n = n / 10;
+++        }
+++        else
+++        {
+++            n = n - 1;
+++        }
+++    }
+++    cout << n << endl;
+++    return 0; 
+++>>>>>>> b9f7f5e043190485111f18651093313dd6b4ade8
++ }
++\ No newline at end of file
+\ No newline at end of file
+diff --git a/linkedListImplementation_practice.cpp b/linkedListImplementation_practice.cpp
+index 4fd88d9..e193137 100644
+--- a/linkedListImplementation_practice.cpp
++++ b/linkedListImplementation_practice.cpp
+@@ -31,14 +31,32 @@ void insertafterNode(Node* prev_node,  int x)
+ 	}
+ }
+ 
+-void deleteHead()
++void deleteHead(Node** p)
+ {
+-
++	Node *ptr;
++	if(p == NULL)
 +	{
-+		if(mp.count(decimal))
-+		{
-+			ans.insert(mp[decimal], "(");
-+			ans += ")";
-+			return ans;
-+		}
-+		else
-+		{
-+			mp[decimal] = ans.length();
-+			decimal *= 10;
-+			int q = decimal / denominator;
-+			decimal = decimal % denominator;
-+			ans += to_string(q);
-+		}
-+	}
-+	return ans;
-+}
-+
-+int main(int argc, char const *argv[])
-+{
-+	int numerator, denominator;
-+	cin >> numerator >> denominator;
-+	cout << fractiontoDecimal (numerator, denominator) << endl;
-+	return 0;
-+}
-diff --git a/fractionResult_gfg.exe b/fractionResult_gfg.exe
-new file mode 100644
-index 0000000..d37e54d
-Binary files /dev/null and b/fractionResult_gfg.exe differ
-diff --git a/goodPairs_leetcode.cpp b/goodPairs_leetcode.cpp
-new file mode 100644
-index 0000000..902612c
---- /dev/null
-+++ b/goodPairs_leetcode.cpp
-@@ -0,0 +1,37 @@
-+#include <bits/stdc++.h>
-+using namespace std;
-+
-+int identicalPairs(vector<int>& nums)
-+{
-+	ios::sync_with_stdio(0);
-+	cin.tie(0);
-+	unordered_map<int, int> count;
-+	int ans(0);
-+	for (int i = 0; i < nums.size(); i++)
-+	{
-+		count[nums[i]]++;
-+	}
-+	for (auto i : count)
-+	{
-+		if (i.second > 1)
-+		{
-+			int nc = i.second;
-+			ans += (nc * (nc - 1)) / 2; 
-+		}
-+	}
-+	return ans;
-+}
-+
-+int main()
-+{
-+	int n, a;
-+	vector<int> nums;
-+	cin >> n;
-+	for (int i =0; i < n; i++)
-+	{
-+		cin >> a;
-+		nums.push_back(a);
-+	}
-+	cout << identicalPairs(nums) << endl;
-+	return 0;
-+}
-diff --git a/goodPairs_leetcode.exe b/goodPairs_leetcode.exe
-new file mode 100644
-index 0000000..cdaf212
-Binary files /dev/null and b/goodPairs_leetcode.exe differ
-diff --git a/hello_world.cpp b/hello_world.cpp
-new file mode 100644
-index 0000000..9505381
---- /dev/null
-+++ b/hello_world.cpp
-@@ -0,0 +1,17 @@
-+#include <bits/stdc++.h>
-+using namespace std;
-+
-+int main()
-+{
-+	int number;
-+	cin >> number;
-+	if (number == 10)
-+	{
-+		cout << "Correct Guess: " << endl;
++		cout << "List is Empty\n";
 +	}
 +	else
 +	{
-+		cout << "Wrong Guess: " << endl;
++		ptr = *p;
++		*p = ptr->next;
++		delete ptr;
 +	}
-+	return 0;
-+}
-diff --git a/hello_world.exe b/hello_world.exe
+ }
+ 
+-void deleteafterNode()
++void deleteafterNode(Node* p, int key)
+ {
+-
++	Node* q = NULL;
++	while (p->data != key)
++	{
++		q = p;
++		p = p->next;
++	}
++	q->next = p->next;
++	int x = p->data;
++	delete p;
+ }
+ 
+ void display(Node* p)
+@@ -73,6 +91,8 @@ int main()
+ 
+ 	insertatHead (&p, 01);
+ 	insertafterNode(fifth, 60);
++	deleteHead(&p);
++	deleteafterNode(p, 40);
+ 	display(p);
+ 
+ 	return 0;
+diff --git a/linkedListImplementation_practice.exe b/linkedListImplementation_practice.exe
+index 8e95078..76456d2 100644
+Binary files a/linkedListImplementation_practice.exe and b/linkedListImplementation_practice.exe differ
+diff --git a/stackusingArrays_practice.cpp b/stackusingArrays_practice.cpp
 new file mode 100644
-index 0000000..3e0d6cd
-Binary files /dev/null and b/hello_world.exe differ
-diff --git a/kidswithCandies_leetcode.cpp b/kidswithCandies_leetcode.cpp
-new file mode 100644
-index 0000000..3693959
+index 0000000..8c97e43
 --- /dev/null
-+++ b/kidswithCandies_leetcode.cpp
-@@ -0,0 +1,43 @@
-+#include <bits/stdc++.h>
++++ b/stackusingArrays_practice.cpp
+@@ -0,0 +1,125 @@
++#include <iostream>
 +using namespace std;
 +
-+vector<bool> kidswithCandies(vector<int>& candies, int extraCandies)
++template<class T>
++class Stack
 +{
-+	ios::sync_with_stdio(0);
-+	cin.tie(0), cout.tie(0);
-+	vector<bool> result;
-+	int maxNum(INT_MIN);
-+	for (int i = 0; i < candies.size(); i++)
++private:
++	T *st;
++	int size;
++	int top;
++public:
++	Stack()
 +	{
-+		if(candies[i] > maxNum)
-+		{
-+			maxNum = candies[i];
-+		}
++		size = 10;
++		top = -1;
++		st = new T[size];
 +	}
-+	for (int i = 0; i < candies.size(); i++)
++	Stack(int size)
 +	{
-+		if(candies[i] + extraCandies >= maxNum)
-+		{
-+			result.push_back(true);
-+		}
-+		else
-+		{
-+			result.push_back(false);
-+		}
++		this->size = size;
++		top = -1;
++		st = new T[this->size];
 +	}
-+	return result;
++	void push(T x);
++	T pop();
++	T peek (int index);
++	int stackTop();
++	bool isEmpty();
++	bool isFull();
++	void display();
++};
++
++template<class T>
++void Stack<T>:: push(T x)
++{
++	if(isFull())
++	{
++		cout << "Stack Overflow\n";
++	}
++	else
++	{
++		top++;
++		st[top] = x;
++	}
++}
++
++template<class T>
++T Stack<T>:: pop()
++{
++	T x = -1;
++	if(isEmpty())
++	{
++		cout << "Stack Underflow\n";
++	}
++	else
++	{
++		x = st[top];
++		top--;
++	}
++	return x;
++}
++
++template<class T>
++T Stack<T>::peek(int index)
++{
++	T x = -1;
++	if(top - index + 1 < 0)
++		cout << "Invalid Index\n";
++	else
++		x = st[top - index + 1];
++	return x;
++}
++
++template<class T>
++int Stack<T>::stackTop()
++{
++	if (isEmpty())
++		return -1;
++	return st[top];
++}
++
++template<class T>
++bool Stack<T>::isFull()
++{
++	if(top == size - 1)
++		return true;
++	return false;
++}
++
++template<class T>
++bool Stack<T>::isEmpty()
++{
++	if(top == -1)
++		return true;
++	return false;
++}
++
++template<class T>
++void Stack<T>::display()
++{
++	for (int i = top; i >= 0; i--)
++	{
++		cout << st[i] << " ";
++	}
++	cout << endl;
 +}
 +
 +int main()
 +{
-+	vector<int> candies;
-+	int n, a, eC;
-+	cin >> n >> eC;
-+	for (int i = 0; i < n; i++)
-+	{
-+		cin >> a;
-+		candies.push_back(a);
-+	}
-+	kidswithCandies(candies, eC);
++	Stack<char> stk(6);
++	stk.push('a');
++	stk.push('b');
++	stk.push('c');
++	stk.push('d');
++	stk.push('e');
++	stk.push('f');
++
++	stk.display();
++
++	cout << endl;
++	cout << stk.peek(1) << endl;
++	cout << endl;
++	cout << stk.isEmpty();
 +	return 0;
 +}
-diff --git a/kidswithCandies_leetcode.exe b/kidswithCandies_leetcode.exe
+diff --git a/stackusingArrays_practice.exe b/stackusingArrays_practice.exe
 new file mode 100644
-index 0000000..0579337
-Binary files /dev/null and b/kidswithCandies_leetcode.exe differ
-diff --git a/majorityElement_gfg.cpp b/majorityElement_gfg.cpp
-new file mode 100644
-index 0000000..6aab8ec
---- /dev/null
-+++ b/majorityElement_gfg.cpp
-@@ -0,0 +1,55 @@
-+#include <bits/stdc++.h>
-+#define pb push_back
-+using namespace std;
-+
-+int majorityElement (vector<int>& nums)
-+{
-+	int votes(0), candidate(-1);
-+	int nS = nums.size();
-+	for (int i = 0; i < nS; i++)
-+	{
-+		if(votes == 0)
-+		{
-+			candidate = nums[i];
-+			votes = 1;
-+		}
-+		else
-+		{
-+			if(nums[i] == candidate)
-+			{
-+				votes++;
-+			}
-+			else
-+			{
-+				votes--;
-+			}
-+		}
-+	}
-+	int count(0);
-+	for (int i = 0; i < nS; i++)
-+	{
-+		if(nums[i] == candidate)
-+		{
-+			count++;
-+		}
-+	}
-+	if (count > nS/2)
-+	{
-+		return candidate;
-+	}
-+	return -1;
-+}
-+
-+int main()
-+{
-+	vector<int> nums;
-+	int n, a;
-+	cin >> n;
-+	for (int i = 0; i < n; i++)
-+	{
-+		cin >> a;
-+		nums.push_back(a);
-+	}
-+	cout << majorityElement(nums);
-+	return 0;
-+}
-\ No newline at end of file
-diff --git a/majorityElement_gfg.exe b/majorityElement_gfg.exe
-new file mode 100644
-index 0000000..3778f47
-Binary files /dev/null and b/majorityElement_gfg.exe differ
-diff --git a/removeElement_leetcode.cpp b/removeElement_leetcode.cpp
-new file mode 100644
-index 0000000..e69de29
-diff --git a/smallerNumbersThanCurrent_leetcode.cpp b/smallerNumbersThanCurrent_leetcode.cpp
-new file mode 100644
-index 0000000..20b818a
---- /dev/null
-+++ b/smallerNumbersThanCurrent_leetcode.cpp
-@@ -0,0 +1,38 @@
-+#include <bits/stdc++.h>
-+using namespace std;
-+
-+vector<int> smallerNumbersThanCurrent(vector<int>& nums)
-+{
-+	ios::sync_with_stdio(0);
-+	cin.tie(0), cout.tie(0);
-+	std::map<int, int> helper;
-+	std::vector<int> vec(nums.begin(), nums.end());
-+	sort (vec.begin(), vec.end());
-+	for (int i = nums.size() - 1; i >= 0; i--)
-+	{
-+		helper[vec[i]] = i;
-+	}
-+	for (int i = 0; i < nums.size(); i++)
-+	{
-+		nums[i] = helper[nums[i]];
-+	}
-+	for (auto x : nums)
-+	{
-+		cout << x << " ";
-+	}
-+	return nums;
-+}
-+
-+int main()
-+{
-+	vector<int> nums;
-+	int n, a;
-+	cin >> n;
-+	for (int i = 0; i < n; i++)
-+	{
-+		cin >> a;
-+		nums.push_back(a);
-+	}
-+	smallerNumbersThanCurrent(nums);
-+	return 0;
-+}
-diff --git a/smallerNumbersThanCurrent_leetcode.exe b/smallerNumbersThanCurrent_leetcode.exe
-new file mode 100644
-index 0000000..bb34f72
-Binary files /dev/null and b/smallerNumbersThanCurrent_leetcode.exe differ
+index 0000000..c1311c6
+Binary files /dev/null and b/stackusingArrays_practice.exe differ

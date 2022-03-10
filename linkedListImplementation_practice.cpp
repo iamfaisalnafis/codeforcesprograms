@@ -31,14 +31,32 @@ void insertafterNode(Node* prev_node,  int x)
 	}
 }
 
-void deleteHead()
+void deleteHead(Node** p)
 {
-
+	Node *ptr;
+	if(p == NULL)
+	{
+		cout << "List is Empty\n";
+	}
+	else
+	{
+		ptr = *p;
+		*p = ptr->next;
+		delete ptr;
+	}
 }
 
-void deleteafterNode()
+void deleteafterNode(Node* p, int key)
 {
-
+	Node* q = NULL;
+	while (p->data != key)
+	{
+		q = p;
+		p = p->next;
+	}
+	q->next = p->next;
+	int x = p->data;
+	delete p;
 }
 
 void display(Node* p)
@@ -73,6 +91,8 @@ int main()
 
 	insertatHead (&p, 01);
 	insertafterNode(fifth, 60);
+	deleteHead(&p);
+	deleteafterNode(p, 40);
 	display(p);
 
 	return 0;
